@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BackgroundFetchTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4F-Jq-8WU">
+                                <rect key="frame" x="20" y="289.5" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="std-Ao-GPN">
+                                <rect key="frame" x="20" y="326.5" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="MTh-cv-nIg">
+                                <rect key="frame" x="20" y="384" width="560" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="494732604.64420801">
+                                    <!--2016-09-05 01:43:24 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="datePicked:" destination="BYZ-38-t0r" eventType="valueChanged" id="Jv2-Nw-D8J"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="MTh-cv-nIg" secondAttribute="bottom" id="Fxh-yR-zeI"/>
+                            <constraint firstItem="T4F-Jq-8WU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="IDo-Bb-324"/>
+                            <constraint firstItem="MTh-cv-nIg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="QTY-bM-2gt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MTh-cv-nIg" secondAttribute="trailing" id="Ujl-bz-1Bw"/>
+                            <constraint firstItem="std-Ao-GPN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="VKf-HW-Drk"/>
+                            <constraint firstItem="std-Ao-GPN" firstAttribute="top" secondItem="T4F-Jq-8WU" secondAttribute="bottom" constant="16" id="WSq-4P-fIb"/>
+                            <constraint firstItem="T4F-Jq-8WU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="f4C-Un-IU8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T4F-Jq-8WU" secondAttribute="trailing" id="h2b-Nh-eCl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="std-Ao-GPN" secondAttribute="trailing" id="nEE-7m-Rpm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label1" destination="T4F-Jq-8WU" id="9uk-IC-ZpQ"/>
+                        <outlet property="label2" destination="std-Ao-GPN" id="fpo-0n-Vbm"/>
+                        <outlet property="picker" destination="MTh-cv-nIg" id="fCl-0J-Cfn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
