@@ -17,21 +17,21 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let nc = NSNotificationCenter.defaultCenter()
+        let nc = NotificationCenter.default
         
-        nc.addObserver(self, selector: #selector(ViewController.updateLabels), name: UIApplicationDidBecomeActiveNotification, object: nil)
+        nc.addObserver(self, selector: #selector(ViewController.updateLabels), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.updateLabels()
     }
     
     @objc func updateLabels() {
         
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let backgroundTime = defaults.objectForKey("background") as? String
-        let suspendTime = defaults.objectForKey("suspend") as? String
+        let defaults = UserDefaults.standard
+        let backgroundTime = defaults.object(forKey: "background") as? String
+        let suspendTime = defaults.object(forKey: "suspend") as? String
         
         label1.text! = backgroundTime ?? "No background fetch"
         label2.text! = suspendTime ?? "Never suspended"
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func datePicked(sender: UIDatePicker) {
+    @IBAction func datePicked(_ sender: UIDatePicker) {
         print(sender.date)
     }
 
